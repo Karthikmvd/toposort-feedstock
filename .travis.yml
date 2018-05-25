@@ -32,7 +32,6 @@ before_install:
 install:
     # Install Miniconda.
     - |
-      echo "Anaconda"
       echo "Installing a fresh version of Miniconda."
       MINICONDA_URL="https://repo.continuum.io/miniconda"
       MINICONDA_FILE="Miniconda3-latest-Linux-ppc64le.sh"

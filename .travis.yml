@@ -57,5 +57,5 @@ install:
       #anaconda -v  -y login --username $USER --password $PASSWORD
 script:
   - conda build ./recipe
-  - lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; set ssl-allow yes; set passive-mode yes; set ssl:verify-certificate no; put -O $FTP_DIRECTORY /opt/conda/conda-bld/linux-ppc64le/keras-2.1.5-py36_0.tar.bz2"
+  - lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; set ssl-allow yes; set passive-mode yes; set ssl:verify-certificate no; put -O $FTP_DIRECTORY /opt/conda/conda-bld/linux-ppc64le/*.tar.bz2"
 #- upload_or_check_non_existence ./recipe conda-forge --channel=main -m ./${CONFIG}.yaml
